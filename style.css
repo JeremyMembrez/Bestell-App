@@ -35,3 +35,46 @@ footer p {
     gap: 72px;
 
 }
+
+.landing-section-background {
+    background-image: url(./assets/img/landing-page-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.landing-section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 26px;
+}
+
+.landing-section-content p {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.landing-section-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 26px;
+}
+
+.landing-section-description-text {
+    display: flex;
+}
+
+.landing-section-description-text p {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.burger-color {
+    color: rgba(231, 108, 31, 1);
+}
+

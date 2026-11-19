@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 
-main {
+section {
     height: 100dvh;
     width: 100%;
-    background-color: aqua;
 }
