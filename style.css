@@ -1,0 +1,37 @@
+header {
+    background-color: rgba(231, 108, 31, 1);
+    height: 128px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 38px max(calc(50% - 720px), 120px);
+}
+
+
+
+footer {
+    background-color: rgba(231, 108, 31, 1);
+    height: 128px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3px;
+    padding: 0px max(calc(50% - 720px), 160px);
+    padding-top: 38px;
+}
+
+footer p {
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    gap: 72px;
+
+}
