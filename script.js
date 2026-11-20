@@ -14,32 +14,60 @@ function renderDishes() {
 
 function renderBasket() {
     let basketContentRef = document.getElementById("basket-content");
-    let hasItems = false;
 
-    for (let i = 0; i < myDishes.length; i++) {
-        if (myDishes[i].amount > 0) {
-            hasItems = true;
-        }
-    }
-
-    if (hasItems === true) {
-        basketContentRef.innerHTML = getFilledBasketTemplate();
-
-        let orderWrapperRef = document.getElementById("order-wrapper");
-
-        for (let i = 0; i < myDishes.length; i++) {
-            if (myDishes[i].amount > 0) {
-            orderWrapperRef.innerHTML += getOrderCardTemplate(i);
-            }
-        }
-
+    if (hasDishesInBasket()) {
+        renderFilledBasket(basketContentRef);
     } else {
         basketContentRef.innerHTML = getEmptyBasketTemplate();
     }
 }
 
-function addToBasket(index) {
+function hasDishesInBasket() {
+    for (let i = 0; i < myDishes.length; i++) {
+        if (myDishes[i].amount > 0) {
+            return true;
+        }
+    }
+    return false;
+}
 
-myDishes[index].amount++;
+function renderFilledBasket(basketContentRef) {
+    let subtotal = calculateSubtotal();
+    let total = subtotal + 4.99;
+    let formattedSubtotal = subtotal.toFixed(2).replace(".", ",");
+    let formattedTotal = total.toFixed(2).replace(".", ",");
+    basketContentRef.innerHTML = getFilledBasketTemplate(formattedSubtotal, formattedTotal);
+    let orderWrapperRef = document.getElementById("order-wrapper");
+
+    for (let i = 0; i < myDishes.length; i++) {
+        if (myDishes[i].amount > 0) {
+            orderWrapperRef.innerHTML += getOrderCardTemplate(i);
+        }
+    }
+}
+
+function addToBasket(index) {
+    myDishes[index].amount++;
     renderBasket();
+}
+
+function decreaseAmount(index) {
+    myDishes[index].amount--;
+    renderBasket();
+}
+
+function deleteDish(index) {
+    myDishes[index].amount = 0;
+    renderBasket();
+}
+
+function calculateSubtotal() {
+    let subtotal = 0;
+
+    for (let i = 0; i < myDishes.length; i++) {
+        if (myDishes[i].amount > 0) {
+            subtotal += myDishes[i].price * myDishes[i].amount;
+        }
+    }
+    return subtotal;
 }

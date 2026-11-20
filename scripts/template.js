@@ -29,7 +29,7 @@ function getEmptyBasketTemplate() {
     `
 }
 
-function getFilledBasketTemplate() {
+function getFilledBasketTemplate(subtotal, total) {
 
     return`
     <h4>Your Basket</h4>
@@ -42,14 +42,14 @@ function getFilledBasketTemplate() {
                         </tr>
                         <tr>
                             <td>Delivery fee</td>
-                            <td class="price">4,99€</td>
+                            <td class="price">${subtotal}€</td>
                         </tr>
                         <tr class="total-row">
                             <td>Total</td>
-                            <td class="price">41,69€</td>
+                            <td class="price">${total}€</td>
                         </tr>
                     </table>
-                <button id="buy-now-button">Buy now (41,69€)</button>
+                <button id="buy-now-button">Buy now (${total}€)</button>
         `
 }
 
@@ -59,13 +59,14 @@ function getOrderCardTemplate(index) {
         <p>${myDishes[index].amount} x ${myDishes[index].name}</p>
         <div class="order-position">
             <div class="order-amount">
-                <button><img class="trash" src="./assets/icons/delete.svg"alt="Löschen Icon"/></button>
-                <button><img class="minus" src="./assets/icons/-.svg"alt="Minus Icon"/></button>
+                <button onclick="deleteDish(${index})"><img class="trash" src="./assets/icons/delete.svg"alt="Löschen Icon"/></button>
+                <button onclick="decreaseAmount(${index})"><img class="minus" src="./assets/icons/-.svg"alt="Minus Icon"/></button>
                 <p>${myDishes[index].amount}</p>
-                <button><img class="plus" src="./assets/icons/+.svg"alt="Plus Icon"/></button>
+                <button onclick="addToBasket(${index})"><img class="plus" src="./assets/icons/+.svg"alt="Plus Icon"/></button>
             </div>
             <p>${(myDishes[index].price * myDishes[index].amount).toFixed(2).replace(".", ",")}€</p>
         </div>
     </div>
     `
 }
+
