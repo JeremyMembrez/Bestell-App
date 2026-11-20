@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 section {
@@ -76,6 +77,7 @@ header {
 }
 
 .landing-section-description-text p {
+    font-family: 'Palanquin Dark';
     font-size: 48px;
     font-weight: 700;
 }
@@ -125,8 +127,6 @@ header {
     font-weight: 700;
     color: white;
 }
-
-
 
 .sticky-rail {
     width: 300px;
