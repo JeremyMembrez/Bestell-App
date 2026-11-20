@@ -185,9 +185,8 @@ header {
 
 .burger-description {
     display: flex;
-
     flex-direction: column;
-    
+    flex: 1;
     gap: 8px;
 }
 
@@ -229,7 +228,7 @@ header {
     align-items: center;
     text-align: center;
 
-    padding: 60px 30px;
+    padding: 60px 20px;
 
     border-radius: 30px 0 0 30px;
 }
@@ -246,7 +245,7 @@ header {
     font-weight: 500;
 }
 
-.basket-content img {
+.empty-basket-img {
     height: 120px;
     width: 120px;
 }
@@ -278,17 +277,17 @@ header {
     align-items: flex-end;
 }
 
-#trash {
+.trash {
     width: 16px;
     height: 18px;
 }
 
-#minus {
+.minus {
     width: 10px;
     height: 29px;
 }
 
-#plus {
+.plus {
     width: 13px;
     height: 29px;
 }
@@ -333,7 +332,23 @@ header {
     padding-top: 16px;
 }
 
+#buy-now-button {
+    width: 280px;
+    height: 56px;
 
+    font-size: 20px;
+    font-weight: 600;
+
+    background-color: rgba(231, 108, 31, 1);
+    color: white;
+
+    padding: 13px 55px;
+    gap: 10px;
+
+    border-radius: 25px;
+
+
+}
 
 footer {
     background-color: rgba(231, 108, 31, 1);
