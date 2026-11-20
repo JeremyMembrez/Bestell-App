@@ -1,151 +1,242 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bestell App</title>
-    <script src="./scripts/db.js"></script>
-    <script src="./scripts/template.js"></script>
-    <script src="./script.js"></script>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./styles/assets.css">
-    <link rel="stylesheet" href="./styles/basket.css">
-    <link rel="stylesheet" href="./styles/fonts.css">
-    <link rel="stylesheet" href="./styles/standard.css">
-    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.svg">
-</head>
-<body>
-    <header>
-        <img src="./assets/icons/Logo-order-app-icon.svg" alt="Bestell App Icon">
-        <img src="./assets/icons/menu-icon.svg" alt="Menü Icon">
-    </header>
-    <main>
-        <section class="landing-section-background">
-        </section>
-        <section class="landing-section-content">
-            <img class="burger-image" src="./assets/img/burger-image.png" alt="Burger Image">
-            <div class="landing-section-description">
-                <div class="landing-section-description-text">
-                    <p class="burger-color">Burger</p>
-                    <p>House</p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bestell App</title>
+        <script src="./scripts/db.js"></script>
+        <script src="./scripts/template.js"></script>
+        <script src="./script.js"></script>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./styles/assets.css" />
+        <link rel="stylesheet" href="./styles/basket.css" />
+        <link rel="stylesheet" href="./styles/fonts.css" />
+        <link rel="stylesheet" href="./styles/standard.css" />
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="./assets/icons/favicon.svg"
+        />
+    </head>
+    <body>
+        <header>
+            <img
+                src="./assets/icons/Logo-order-app-icon.svg"
+                alt="Bestell App Icon"
+            />
+            <img src="./assets/icons/menu-icon.svg" alt="Menü Icon" />
+        </header>
+        <main>
+            <section class="landing-section-background"></section>
+            <section class="landing-section-content">
+                <img
+                    class="burger-image"
+                    src="./assets/img/burger-image.png"
+                    alt="Burger Image"
+                />
+                <div class="landing-section-description">
+                    <div class="landing-section-description-text">
+                        <p class="burger-color">Burger</p>
+                        <p>House</p>
+                    </div>
+                    <img
+                        src="./assets/icons/evaluation-icon.svg"
+                        alt="Bewertung Image"
+                    />
                 </div>
-                <img src="./assets/icons/evaluation-icon.svg" alt="Bewertung Image">
-            </div>
-            <p>The best of Burgers, Pizza, and Greens, all in one great place.</p>
-        </section>
+                <p>
+                    The best of Burgers, Pizza, and Greens, all in one great
+                    place.
+                </p>
+            </section>
             <div class="burger-menue">
-                <img class="burger-icon" src="./assets/icons/burger-icon.svg" alt="Burger Icon">
+                <img
+                    class="burger-icon"
+                    src="./assets/icons/burger-icon.svg"
+                    alt="Burger Icon"
+                />
                 <p>Burger & Sandwiches</p>
             </div>
-        <section class="burger-menue-section">
-            
-            <div class="menue-cards-wrapper">
-                <div class="menue-card">
-                    <img src="./assets/img/Veggie mushroom black burger.jpg" alt="Veggie Mushroom Black Burger">
-                    <div class="burger-description">
-                        <h4>Veggie mushroom black burger</h4>
-                        <p>Mixed green salad, Tomatoes, Edamame, Mushrooms</p>
+            <section class="burger-menue-section">
+                <div class="menue-cards-wrapper">
+                    <div class="menue-card">
+                        <img
+                            src="./assets/img/Veggie mushroom black burger.jpg"
+                            alt="Veggie Mushroom Black Burger"
+                        />
+                        <div class="burger-description">
+                            <h4>Veggie mushroom black burger</h4>
+                            <p>
+                                Mixed green salad, Tomatoes, Edamame, Mushrooms
+                            </p>
+                        </div>
+                        <div class="price-button-content">
+                            <p>16,90€</p>
+                            <button>Add to basket</button>
+                        </div>
                     </div>
-                    <div class="price-button-content">
-                        <p>16,90€</p>
-                        <button>Add to basket</button>
+                    <div class="menue-card">
+                        <img
+                            src="./assets/img/Veggie mushroom black burger.jpg"
+                            alt="Veggie Mushroom Black Burger"
+                        />
+                        <div class="burger-description">
+                            <h4>Veggie mushroom black burger</h4>
+                            <p>
+                                Mixed green salad, Tomatoes, Edamame, Mushrooms
+                            </p>
+                        </div>
+                        <div class="price-button-content">
+                            <p>16,90€</p>
+                            <button>Add to basket</button>
+                        </div>
+                    </div>
+                    <div class="menue-card">
+                        <img
+                            src="./assets/img/Veggie mushroom black burger.jpg"
+                            alt="Veggie Mushroom Black Burger"
+                        />
+                        <div class="burger-description">
+                            <h4>Veggie mushroom black burger</h4>
+                            <p>
+                                Mixed green salad, Tomatoes, Edamame, Mushrooms
+                            </p>
+                        </div>
+                        <div class="price-button-content">
+                            <p>16,90€</p>
+                            <button>Add to basket</button>
+                        </div>
+                    </div>
+                    <div class="menue-card">
+                        <img
+                            src="./assets/img/Veggie mushroom black burger.jpg"
+                            alt="Veggie Mushroom Black Burger"
+                        />
+                        <div class="burger-description">
+                            <h4>Veggie mushroom black burger</h4>
+                            <p>
+                                Mixed green salad, Tomatoes, Edamame, Mushrooms
+                            </p>
+                        </div>
+                        <div class="price-button-content">
+                            <p>16,90€</p>
+                            <button>Add to basket</button>
+                        </div>
+                    </div>
+                    <div class="menue-card">
+                        <img
+                            src="./assets/img/Veggie mushroom black burger.jpg"
+                            alt="Veggie Mushroom Black Burger"
+                        />
+                        <div class="burger-description">
+                            <h4>Veggie mushroom black burger</h4>
+                            <p>
+                                Mixed green salad, Tomatoes, Edamame, Mushrooms
+                            </p>
+                        </div>
+                        <div class="price-button-content">
+                            <p>16,90€</p>
+                            <button>Add to basket</button>
+                        </div>
+                    </div>
+                    <div class="menue-card">
+                        <img
+                            src="./assets/img/Veggie mushroom black burger.jpg"
+                            alt="Veggie Mushroom Black Burger"
+                        />
+                        <div class="burger-description">
+                            <h4>Veggie mushroom black burger</h4>
+                            <p>
+                                Mixed green salad, Tomatoes, Edamame, Mushrooms
+                            </p>
+                        </div>
+                        <div class="price-button-content">
+                            <p>16,90€</p>
+                            <button>Add to basket</button>
+                        </div>
+                    </div>
+                    <div class="menue-card">
+                        <img
+                            src="./assets/img/Veggie mushroom black burger.jpg"
+                            alt="Veggie Mushroom Black Burger"
+                        />
+                        <div class="burger-description">
+                            <h4>Veggie mushroom black burger</h4>
+                            <p>
+                                Mixed green salad, Tomatoes, Edamame, Mushrooms
+                            </p>
+                        </div>
+                        <div class="price-button-content">
+                            <p>16,90€</p>
+                            <button>Add to basket</button>
+                        </div>
                     </div>
                 </div>
-                <div class="menue-card">
-                    <img src="./assets/img/Veggie mushroom black burger.jpg" alt="Veggie Mushroom Black Burger">
-                    <div class="burger-description">
-                        <h4>Veggie mushroom black burger</h4>
-                        <p>Mixed green salad, Tomatoes, Edamame, Mushrooms</p>
-                    </div>
-                    <div class="price-button-content">
-                        <p>16,90€</p>
-                        <button>Add to basket</button>
-                    </div>
-                </div>
-                <div class="menue-card">
-                    <img src="./assets/img/Veggie mushroom black burger.jpg" alt="Veggie Mushroom Black Burger">
-                    <div class="burger-description">
-                        <h4>Veggie mushroom black burger</h4>
-                        <p>Mixed green salad, Tomatoes, Edamame, Mushrooms</p>
-                    </div>
-                    <div class="price-button-content">
-                        <p>16,90€</p>
-                        <button>Add to basket</button>
-                    </div>
-                </div>
-                <div class="menue-card">
-                    <img src="./assets/img/Veggie mushroom black burger.jpg" alt="Veggie Mushroom Black Burger">
-                    <div class="burger-description">
-                        <h4>Veggie mushroom black burger</h4>
-                        <p>Mixed green salad, Tomatoes, Edamame, Mushrooms</p>
-                    </div>
-                    <div class="price-button-content">
-                        <p>16,90€</p>
-                        <button>Add to basket</button>
-                    </div>
-                </div>
-                <div class="menue-card">
-                    <img src="./assets/img/Veggie mushroom black burger.jpg" alt="Veggie Mushroom Black Burger">
-                    <div class="burger-description">
-                        <h4>Veggie mushroom black burger</h4>
-                        <p>Mixed green salad, Tomatoes, Edamame, Mushrooms</p>
-                    </div>
-                    <div class="price-button-content">
-                        <p>16,90€</p>
-                        <button>Add to basket</button>
-                    </div>
-                </div>
-                <div class="menue-card">
-                    <img src="./assets/img/Veggie mushroom black burger.jpg" alt="Veggie Mushroom Black Burger">
-                    <div class="burger-description">
-                        <h4>Veggie mushroom black burger</h4>
-                        <p>Mixed green salad, Tomatoes, Edamame, Mushrooms</p>
-                    </div>
-                    <div class="price-button-content">
-                        <p>16,90€</p>
-                        <button>Add to basket</button>
-                    </div>
-                </div>
-                <div class="menue-card">
-                    <img src="./assets/img/Veggie mushroom black burger.jpg" alt="Veggie Mushroom Black Burger">
-                    <div class="burger-description">
-                        <h4>Veggie mushroom black burger</h4>
-                        <p>Mixed green salad, Tomatoes, Edamame, Mushrooms</p>
-                    </div>
-                    <div class="price-button-content">
-                        <p>16,90€</p>
-                        <button>Add to basket</button>
-                    </div>
-                </div>
-            </div>
-            <div class="sticky-rail">
-                <!-- <div class="basket-content">
+                <div class="sticky-rail">
+                    <!-- <div class="basket-content">
                     <h4>Your Basket</h4>
                     <p>Nothing here yet.<br>Go ahead and choose something<br>delicious!</p>
                     <img src="./assets/icons/shopping_cart.svg" alt="">
                 </div> -->
-                <div class="basket-content">
-                    <h4>Your Basket</h4>
-                    <div class="order-wrapper">
-                        <div class="order" >
-                            <p>1 x Veggie mushroom black burger</p>
-                            
+                    <div class="basket-content">
+                        <h4>Your Basket</h4>
+                        <div class="order-wrapper">
+                            <div class="order-card">
+                                <p>1 x Veggie mushroom black burger</p>
+                                <div class="order-position">
+                                    <div class="order-amount">
+                                        <button>
+                                            <img
+                                                id="trash"
+                                                src="./assets/icons/delete.svg"
+                                                alt="Löschen Icon"
+                                            />
+                                        </button>
+                                        <button>
+                                            <img
+                                                id="minus"
+                                                src="./assets/icons/-.svg"
+                                                alt="Minus Icon"
+                                            />
+                                        </button>
+                                        <p>1</p>
+                                        <button>
+                                            <img
+                                                id="plus"
+                                                src="./assets/icons/+.svg"
+                                                alt="Plus Icon"
+                                            />
+                                        </button>
+                                    </div>
+                                    <p>16,90 €</p>
+                                </div>
+                            </div>
                         </div>
-
+                        <table class="basket-table">
+                            <tr>
+                                <td>Subtotal</td>
+                                <td class="price">36,70</td>
+                            </tr>
+                            <tr>
+                                <td>Delivery fee</td>
+                                <td class="price">4,99€</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td>Total</td>
+                                <td class="price">41,69€</td>
+                            </tr>
+                        </table>
                     </div>
-                    <p>Nothing here yet.<br>Go ahead and choose something<br>delicious!</p>
-                    <img src="./assets/icons/shopping_cart.svg" alt="">
                 </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-            <img src="./assets/icons/copyright-icon.svg" alt="">
+            </section>
+        </main>
+        <footer>
+            <img src="./assets/icons/copyright-icon.svg" alt="" />
             <div class="footer-content">
                 <p>2025 BurgerHouse</p>
                 <p>Imprint</p>
                 <p>Cookie Preferences</p>
             </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 </html>
