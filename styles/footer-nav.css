@@ -1,0 +1,50 @@
+nav {
+    background-color: var(--gray);
+
+    padding: 24px max(calc(50% - 720px), 25px);
+    position: fixed;
+    bottom: 0;
+    height: 78px;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+}
+nav img {
+    width: 24px;
+    height: 24px;
+}
+
+nav button {
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--orange);
+    height: 128px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3px;
+    padding: 38px max(calc(50% - 720px), 80px);
+    padding-top: 38px;
+
+    
+}
+
+footer p {
+    color: var(--white);
+}
+
+.footer-content {
+    display: flex;
+    gap: 72px;
+}

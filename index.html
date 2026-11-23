@@ -9,20 +9,23 @@
         <script src="./script.js"></script>
         <link rel="stylesheet" href="./styles/variables.css">
         <link rel="stylesheet" href="./style.css" />
-        <link rel="stylesheet" href="./styles/assets.css" />
+        <link rel="stylesheet" href="./styles/footer-nav.css" />
         <link rel="stylesheet" href="./styles/basket.css" />
         <link rel="stylesheet" href="./styles/fonts.css" />
         <link rel="stylesheet" href="./styles/standard.css" />
+        <link rel="stylesheet" href="./styles/delivery-service.css">
         <link rel="stylesheet" href="./styles/responsive.css">
         <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.svg" />
     </head>
     <body onload="init()">
         <header>
             <img src="./assets/icons/Logo-order-app-icon.svg" alt="Bestell App Icon" />
-            <img src="./assets/icons/menu-icon.svg" alt="Menü Icon" />
+            <img class="menu-icon" src="./assets/icons/menu-icon.svg" alt="Menü Icon" />
         </header>
         <main>
-            <section class="landing-section-background"></section>
+            <section class="landing-section-background-position">
+                <div class="landing-section-background"></div>
+            </section>
             <section class="landing-section-content">
                 <img class="burger-image" src="./assets/img/burger-image.png" alt="Burger Image" />
                 <div class="landing-section-description">
@@ -36,7 +39,7 @@
             </section>
             <div class="burger-menue">
                 <img class="burger-icon" src="./assets/icons/burger-icon.svg" alt="Burger Icon" />
-                <p>The Burger Universe</p>
+                <p>Burger</p>
             </div>
             <section class="burger-menue-section">
                 <div id="menue-cards-wrapper" class="menue-cards-wrapper"></div>
