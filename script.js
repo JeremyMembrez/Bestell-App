@@ -48,6 +48,7 @@ function renderFilledBasket(basketContentRef) {
 
 function addToBasket(index) {
     myDishes[index].amount++;
+    document.getElementById("sticky-rail").classList.add("open-basket");
     renderBasket();
 }
 
@@ -71,3 +72,25 @@ function calculateSubtotal() {
     }
     return subtotal;
 }
+
+function sendOrder() {
+    for (let i = 0; i < myDishes.length; i++) {
+        myDishes[i].amount = 0;
+    }
+    document.getElementById("sticky-rail").classList.remove("open-basket");
+    renderBasket();
+    openDialog();
+}
+
+function openDialog() {
+    document.getElementById("order-dialog").classList.remove("d-none");
+}
+
+function closeDialog() {
+    document.getElementById("order-dialog").classList.add("d-none");
+}
+
+function toggleBasket() {
+    document.getElementById("sticky-rail").classList.toggle("open-basket");
+}
+

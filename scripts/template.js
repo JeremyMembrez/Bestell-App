@@ -38,18 +38,18 @@ function getFilledBasketTemplate(subtotal, total) {
                     <table class="basket-table">
                         <tr>
                             <td>Subtotal</td>
-                            <td class="price">36,70</td>
+                            <td class="price">${subtotal}€</td>
                         </tr>
                         <tr>
                             <td>Delivery fee</td>
-                            <td class="price">${subtotal}€</td>
+                            <td class="price">4,99€</td>
                         </tr>
                         <tr class="total-row">
                             <td>Total</td>
                             <td class="price">${total}€</td>
                         </tr>
                     </table>
-                <button id="buy-now-button">Buy now (${total}€)</button>
+                <button onclick="sendOrder()" id="buy-now-button">Buy now (${total}€)</button>
         `
 }
 

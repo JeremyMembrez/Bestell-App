@@ -7,79 +7,77 @@
         <script src="./scripts/db.js"></script>
         <script src="./scripts/template.js"></script>
         <script src="./script.js"></script>
+        <link rel="stylesheet" href="./styles/variables.css">
         <link rel="stylesheet" href="./style.css" />
         <link rel="stylesheet" href="./styles/assets.css" />
         <link rel="stylesheet" href="./styles/basket.css" />
         <link rel="stylesheet" href="./styles/fonts.css" />
         <link rel="stylesheet" href="./styles/standard.css" />
-        <link
-            rel="icon"
-            type="image/x-icon"
-            href="./assets/icons/favicon.svg"
-        />
+        <link rel="stylesheet" href="./styles/responsive.css">
+        <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.svg" />
     </head>
     <body onload="init()">
         <header>
-            <img
-                src="./assets/icons/Logo-order-app-icon.svg"
-                alt="Bestell App Icon"
-            />
+            <img src="./assets/icons/Logo-order-app-icon.svg" alt="Bestell App Icon" />
             <img src="./assets/icons/menu-icon.svg" alt="Menü Icon" />
         </header>
         <main>
             <section class="landing-section-background"></section>
             <section class="landing-section-content">
-                <img
-                    class="burger-image"
-                    src="./assets/img/burger-image.png"
-                    alt="Burger Image"
-                />
+                <img class="burger-image" src="./assets/img/burger-image.png" alt="Burger Image" />
                 <div class="landing-section-description">
                     <div class="landing-section-description-text">
                         <p class="burger-color">Burger</p>
                         <p>House</p>
                     </div>
-                    <img
-                        src="./assets/icons/evaluation-icon.svg"
-                        alt="Bewertung Image"
-                    />
+                    <img src="./assets/icons/evaluation-icon.svg" alt="Bewertung Image" />
                 </div>
-                <p>
-                    The best of Burgers, Pizza, and Greens, all in one great
-                    place.
-                </p>
+                <p>The best of Burgers, Pizza, and Greens, all in one great place.</p>
             </section>
             <div class="burger-menue">
-                <img
-                    class="burger-icon"
-                    src="./assets/icons/burger-icon.svg"
-                    alt="Burger Icon"
-                />
+                <img class="burger-icon" src="./assets/icons/burger-icon.svg" alt="Burger Icon" />
                 <p>The Burger Universe</p>
             </div>
             <section class="burger-menue-section">
-                <div id="menue-cards-wrapper" class="menue-cards-wrapper">
-                    
-
-
-                </div>
-                <div class="sticky-rail">
-                    <div id="basket-content" class="basket-content">
-                        
-
-
-                    </div>
+                <div id="menue-cards-wrapper" class="menue-cards-wrapper"></div>
+                <div id="sticky-rail" class="sticky-rail">
+                    <div id="basket-content" class="basket-content"></div>
                 </div>
             </section>
-            
         </main>
         <footer>
-            <img src="./assets/icons/copyright-icon.svg" alt="" />
+            <img src="./assets/icons/copyright-icon.svg" alt="Copyright Image" />
             <div class="footer-content">
                 <p>2025 BurgerHouse</p>
                 <p>Imprint</p>
                 <p>Cookie Preferences</p>
             </div>
         </footer>
+        <nav>
+            <a>
+                <img src="./assets/icons/home.svg" />
+            </a>
+            <a>
+                <img src="./assets/icons/person.svg" />
+            </a>
+            <a>
+                <img src="./assets/icons/takeout_dining_2.svg" />
+            </a>
+            
+                <button onclick="toggleBasket()"><img src="./assets/icons/shopping_cart.svg" /></button>
+        
+        </nav>
+        <div id="order-dialog" class="dialog-overlay d-none" onclick="closeDialog()">
+            <div class="delivery-service-dialog" onclick="event.stopPropagation()">
+                <img onclick="closeDialog()" class="close-image" src="./assets/icons/close.svg" alt="Close Image" />
+                <div class="position-delivery-service-content">
+                    <img class="delivery-service-image" src="./assets/icons/order-confirmed.svg" alt="Delivery Service Image" />
+                    <div class="delivery-service-content">
+                        <h4>Order confirmed!</h4>
+                        <p>Your food is on the way!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
