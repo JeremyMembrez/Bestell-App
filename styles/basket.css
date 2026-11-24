@@ -57,6 +57,7 @@
 .order-card p {
     font-size: 16px;
     font-weight: 700;
+    line-height: 1.2;
 }
 
 .order-position {
@@ -89,6 +90,10 @@
 }
 
 .order-amount button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: unset;
     border: unset;
     cursor: pointer;
@@ -129,6 +134,10 @@
 
     background-color: var(--orange);
     color: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     padding: 13px 55px;
     gap: 10px;

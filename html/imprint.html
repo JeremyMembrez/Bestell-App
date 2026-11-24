@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bestell App</title>
+        <script src="../scripts/db.js"></script>
+        <script src="../scripts/template.js"></script>
+        <script src="../script.js"></script>
+        <link rel="stylesheet" href="../styles/variables.css">
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="../styles/footer-nav.css" />
+        <link rel="stylesheet" href="../styles/basket.css" />
+        <link rel="stylesheet" href="../styles/fonts.css" />
+        <link rel="stylesheet" href="../styles/standard.css" />
+        <link rel="stylesheet" href="../styles/delivery-service.css">
+        <link rel="stylesheet" href="../styles/responsive.css">
+        <link rel="stylesheet" href="../styles/imprint.css">
+        <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.svg" />
+    </head>
+    <body>
+        <header>
+            <img src="../assets/icons/Logo-order-app-icon.svg" alt="Bestell App Icon" />
+            <img class="menu-icon" src="../assets/icons/menu-icon.svg" alt="Menü Icon" />
+        </header>
+        <main>
+
+            <h1>Impressum</h1>
+            <br>
+            <p>Anbieter:<br>Jeremy Membrez</p>
+            <br>
+            
+                Kontakt:<br>Telefon: 089/1234567<br>Telefax:
+                089/1234567-9<br>E-Mail: mail@projektgruppe-vier.de
+            </p>
+            <br><br>
+            <p>Verantwortlich nach § 55 Abs.2 RStV:</p>
+            <p>Jeremy Membrez<br>Musterstraße 3<br>234546 Musterstadt</p>
+            
+        </main>
+        <footer>
+            
+            <div class="footer-content">
+                <div class="copyright-position">
+                <img src="../assets/icons/copyright-icon.svg" alt="Copyright Image"/> 
+                <a href="../index.html"><p>2025 BurgerHouse</p></a>
+                </div>
+                <a href="./html/imprint.html"><p>Imprint</p></a>
+                <p>Cookie Preferences</p>
+            </div>
+        </footer>
+        <nav>
+            <a href="../index.html">
+                <img src="../assets/icons/home.svg" />
+            </a>
+            <a>
+                <img src="../assets/icons/person.svg" />
+            </a>
+            <a>
+                <img src="../assets/icons/takeout_dining_2.svg" />
+            </a>
+            
+                <button onclick="toggleBasket()"><img src="../assets/icons/shopping_cart.svg" /></button>
+        
+        </nav>
+        <div id="order-dialog" class="dialog-overlay d-none" onclick="closeDialog()">
+            <div class="delivery-service-dialog" onclick="event.stopPropagation()">
+                <img onclick="closeDialog()" class="close-image" src="../assets/icons/close.svg" alt="Close Image" />
+                <div class="position-delivery-service-content">
+                    <img class="delivery-service-image" src="../assets/icons/order-confirmed.svg" alt="Delivery Service Image" />
+                    <div class="delivery-service-content">
+                        <h4>Order confirmed!</h4>
+                        <p>Your food is on the way!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

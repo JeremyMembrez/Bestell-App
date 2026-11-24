@@ -25,6 +25,8 @@ nav button {
 }
 
 footer {
+    font-size: 18px;
+
     background-color: var(--orange);
     height: 128px;
     width: 100%;
@@ -36,8 +38,23 @@ footer {
     gap: 3px;
     padding: 38px max(calc(50% - 720px), 80px);
     padding-top: 38px;
+}
 
-    
+footer a {
+    text-decoration: none;
+}
+
+footer img {
+    height: 20px;
+    width: 20px;
+    margin-top: 4px;
+}
+
+.copyright-position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
 }
 
 footer p {
