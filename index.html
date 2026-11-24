@@ -20,7 +20,7 @@
     <body onload="init()">
         <header>
             <img src="./assets/icons/Logo-order-app-icon.svg" alt="Bestell App Icon" />
-            <img class="menu-icon" src="./assets/icons/menu-icon.svg" alt="Menü Icon" />
+            <a href="#burger-menue"><img class="menu-icon" src="./assets/icons/menu-icon.svg" alt="Menü Icon" /></a>
         </header>
         <main>
             <section class="landing-section-background-position">
@@ -37,7 +37,7 @@
                 </div>
                 <p>The best of Burgers, Pizza, and Greens, all in one great place.</p>
             </section>
-            <div class="burger-menue">
+            <div class="burger-menue" id="burger-menue">
                 <img class="burger-icon" src="./assets/icons/burger-icon.svg" alt="Burger Icon" />
                 <p>Burger</p>
             </div>
@@ -60,14 +60,14 @@
             </div>
         </footer>
         <nav>
-            <a>
+            <a href="./index.html">
                 <img src="./assets/icons/home.svg" />
             </a>
             <a>
                 <img src="./assets/icons/person.svg" />
             </a>
-            <a>
-                <img src="./assets/icons/takeout_dining_2.svg" />
+            <a href="#burger-menue">
+                <img src="./assets/icons/takeout_dining_2.svg"/>
             </a>
             
                 <button onclick="toggleBasket()"><img src="./assets/icons/shopping_cart.svg" /></button>

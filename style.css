@@ -17,7 +17,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     height: 444px;
-    padding:  38px max(calc(50% - 720px), 160px);
+    width: 100%;
 }
 
 .landing-section-content {
@@ -35,7 +35,10 @@ header {
 }
 
 .landing-section-background-position {
-    padding:  0px max(calc(50% - 720px), 160px);
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    /* padding:  0px max(calc(50% - 720px), 160px); */
 }
 
 .burger-image {
@@ -165,6 +168,11 @@ header {
     align-items: center;
 
     cursor: pointer;
+}
+
+.menue-card button:hover {
+    box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    color: rgba(231, 108, 31, 1);
 }
 
 .menue-card img {

@@ -59,7 +59,10 @@ function getOrderCardTemplate(index) {
         <p>${myDishes[index].amount} x ${myDishes[index].name}</p>
         <div class="order-position">
             <div class="order-amount">
-                <button onclick="deleteDish(${index})"><img class="trash" src="./assets/icons/delete.svg"alt="Löschen Icon"/></button>
+                <button class="delete-btn" onclick="deleteDish(${index})">
+                <img class="trash trash-default" src="./assets/icons/delete.svg"alt="Löschen Icon"/>
+                <img class="trash trash-hover" src="./assets/icons/press.svg"alt="Löschen Icon"/>
+                </button>
                 <button onclick="decreaseAmount(${index})"><img class="minus" src="./assets/icons/-.svg"alt="Minus Icon"/></button>
                 <p>${myDishes[index].amount}</p>
                 <button onclick="addToBasket(${index})"><img class="plus" src="./assets/icons/+.svg"alt="Plus Icon"/></button>

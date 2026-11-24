@@ -71,6 +71,25 @@
     height: 18px;
 }
 
+.trash-hover {
+    display: none;
+    width: 24px;
+    height: 24px;
+}
+
+.delete-btn:hover .trash-default {
+    display: none;
+}
+
+.delete-btn:hover .trash-hover {
+    display: block;
+}
+
+.delete-btn {
+    height: 24px;
+    width: 24px;
+}
+
 .minus {
     width: 10px;
     height: 29px;
@@ -143,4 +162,10 @@
     gap: 10px;
 
     border-radius: 25px;
+    cursor: pointer;
+}
+
+#buy-now-button:hover {
+    background-color: rgb(239, 136, 73);
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }

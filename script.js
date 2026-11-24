@@ -36,6 +36,7 @@ function renderFilledBasket(basketContentRef) {
     let total = subtotal + 4.99;
     let formattedSubtotal = subtotal.toFixed(2).replace(".", ",");
     let formattedTotal = total.toFixed(2).replace(".", ",");
+    
     basketContentRef.innerHTML = getFilledBasketTemplate(formattedSubtotal, formattedTotal);
     let orderWrapperRef = document.getElementById("order-wrapper");
 
