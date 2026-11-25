@@ -3,6 +3,7 @@ function init() {
     renderDishes();
 }
 
+// render the burger cards
 function renderDishes() {
     let menueCardsWrapperRef = document.getElementById("menue-cards-wrapper");
     menueCardsWrapperRef.innerHTML = "";
@@ -12,6 +13,8 @@ function renderDishes() {
     }
 }
 
+// Does the shopping cart contain dishes? If so, render with function `renderFilledBasket(basketContentRef)`.
+// Else render getEmptyBasketTemplate
 function renderBasket() {
     let basketContentRef = document.getElementById("basket-content");
 
@@ -32,6 +35,9 @@ function hasDishesInBasket() {
     return false;
 }
 
+// adds dishes with a quantity greater than 0 to the shopping cart
+// calculates the total price in the shopping cart
+// replace the (.) with a (,)
 function renderFilledBasket(basketContentRef) {
     let subtotal = calculateSubtotal();
     let total = subtotal + 4.99;
@@ -48,22 +54,26 @@ function renderFilledBasket(basketContentRef) {
     }
 }
 
+// Increase quantity in the shopping cart
 function addToBasket(index) {
     myDishes[index].amount++;
     document.getElementById("sticky-rail").classList.add("open-basket");
     renderBasket();
 }
 
+// Decrease quantity in the shopping cart
 function decreaseAmount(index) {
     myDishes[index].amount--;
     renderBasket();
 }
 
+// Remove dish from the shopping cart
 function deleteDish(index) {
     myDishes[index].amount = 0;
     renderBasket();
 }
 
+// Calculation: dishes * amount
 function calculateSubtotal() {
     let subtotal = 0;
 
@@ -75,6 +85,8 @@ function calculateSubtotal() {
     return subtotal;
 }
 
+// Submit order and set all dishes to 0
+// The shopping cart is hidden & Dialog opens
 function sendOrder() {
     for (let i = 0; i < myDishes.length; i++) {
         myDishes[i].amount = 0;
@@ -84,14 +96,17 @@ function sendOrder() {
     openDialog();
 }
 
+// Dialog opens
 function openDialog() {
     document.getElementById("order-dialog").classList.remove("d-none");
 }
 
+// Dialog disappears
 function closeDialog() {
     document.getElementById("order-dialog").classList.add("d-none");
 }
 
+// show or hide shopping cart
 function toggleBasket() {
     document.getElementById("sticky-rail").classList.toggle("open-basket");
 }
