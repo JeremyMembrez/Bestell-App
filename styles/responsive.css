@@ -143,6 +143,10 @@
     nav {
         padding: 20px max(calc(50% - 720px), 16px);
     }
+
+    .responsive-imprint {
+        padding: 38px max(calc(50% - 720px), 38px);
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1279px) {

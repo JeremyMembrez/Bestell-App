@@ -22,6 +22,7 @@ function renderBasket() {
     }
 }
 
+// Checks whether dishes in "myDishes" have an amount > 0.
 function hasDishesInBasket() {
     for (let i = 0; i < myDishes.length; i++) {
         if (myDishes[i].amount > 0) {
@@ -36,7 +37,7 @@ function renderFilledBasket(basketContentRef) {
     let total = subtotal + 4.99;
     let formattedSubtotal = subtotal.toFixed(2).replace(".", ",");
     let formattedTotal = total.toFixed(2).replace(".", ",");
-    
+
     basketContentRef.innerHTML = getFilledBasketTemplate(formattedSubtotal, formattedTotal);
     let orderWrapperRef = document.getElementById("order-wrapper");
 

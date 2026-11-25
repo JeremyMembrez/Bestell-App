@@ -7,14 +7,15 @@
         <script src="./scripts/db.js"></script>
         <script src="./scripts/template.js"></script>
         <script src="./script.js"></script>
-        <link rel="stylesheet" href="./styles/variables.css">
+        <link rel="stylesheet" href="./styles/variables.css" />
         <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./styles/header.css">
         <link rel="stylesheet" href="./styles/footer-nav.css" />
         <link rel="stylesheet" href="./styles/basket.css" />
         <link rel="stylesheet" href="./styles/fonts.css" />
         <link rel="stylesheet" href="./styles/standard.css" />
-        <link rel="stylesheet" href="./styles/delivery-service.css">
-        <link rel="stylesheet" href="./styles/responsive.css">
+        <link rel="stylesheet" href="./styles/delivery-service.css" />
+        <link rel="stylesheet" href="./styles/responsive.css" />
         <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.svg" />
     </head>
     <body onload="init()">
@@ -30,17 +31,16 @@
                 <img class="burger-image" src="./assets/img/burger-image.png" alt="Burger Image" />
                 <div class="landing-section-description">
                     <div class="landing-section-description-text">
-                        <p class="burger-color">Burger</p>
-                        <p>House</p>
+                        <h1 class="burger-color">Burger<span>House</span></h1>
                     </div>
                     <img src="./assets/icons/evaluation-icon.svg" alt="Bewertung Image" />
                 </div>
                 <p>The best of Burgers, Pizza, and Greens, all in one great place.</p>
             </section>
-            <div class="burger-menue" id="burger-menue">
+            <section class="burger-menue" id="burger-menue">
                 <img class="burger-icon" src="./assets/icons/burger-icon.svg" alt="Burger Icon" />
-                <p>Burger</p>
-            </div>
+                <h2>Burger</h2>
+            </section>
             <section class="burger-menue-section">
                 <div id="menue-cards-wrapper" class="menue-cards-wrapper"></div>
                 <div id="sticky-rail" class="sticky-rail">
@@ -49,11 +49,10 @@
             </section>
         </main>
         <footer>
-            
             <div class="footer-content">
                 <div class="copyright-position">
-                <img src="./assets/icons/copyright-icon.svg" alt="Copyright Image"/> 
-                <p>2025 BurgerHouse</p>
+                    <img src="./assets/icons/copyright-icon.svg" alt="Copyright Image" />
+                    <p>2025 BurgerHouse</p>
                 </div>
                 <a href="./html/imprint.html"><p>Imprint</p></a>
                 <p>Cookie Preferences</p>
@@ -63,19 +62,17 @@
             <a href="./index.html">
                 <img src="./assets/icons/home.svg" />
             </a>
-            <a>
-                <img src="./assets/icons/person.svg" />
-            </a>
+            <img src="./assets/icons/person.svg" />
             <a href="#burger-menue">
-                <img src="./assets/icons/takeout_dining_2.svg"/>
+                <img src="./assets/icons/takeout_dining_2.svg" />
             </a>
-            
-                <button onclick="toggleBasket()"><img src="./assets/icons/shopping_cart.svg" /></button>
-        
+            <button onclick="toggleBasket()"><img src="./assets/icons/shopping_cart.svg" /></button>
         </nav>
-        <div id="order-dialog" class="dialog-overlay d-none" onclick="closeDialog()">
+        <section id="order-dialog" class="dialog-overlay d-none" onclick="closeDialog()">
             <div class="delivery-service-dialog" onclick="event.stopPropagation()">
+                <button aria-label="Dialog schließen">
                 <img onclick="closeDialog()" class="close-image" src="./assets/icons/close.svg" alt="Close Image" />
+                </button>
                 <div class="position-delivery-service-content">
                     <img class="delivery-service-image" src="./assets/icons/order-confirmed.svg" alt="Delivery Service Image" />
                     <div class="delivery-service-content">
@@ -84,6 +81,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </body>
 </html>

@@ -43,6 +43,12 @@
     color: var(--white);
 }
 
+.delivery-service-dialog button {
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+}
+
 .delivery-service-image {
     height: 57px;
     width: 80px;
