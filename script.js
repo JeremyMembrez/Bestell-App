@@ -58,17 +58,41 @@ function renderFilledBasket(basketContentRef) {
     }
 }
 
+// Falls das Gericht neu hinzugefügt wurde oder auf 0 gefallen ist -> komplett rendern
+// Nur diese eine Karte neu rendern
+function updateSingleOrderCard(index) {
+    let cardRef = document.getElementById(`order-card-${index}`);
+
+    if (!cardRef || myDishes[index].amount <= 0) {
+        renderBasket();
+        return;
+    }
+    cardRef.outerHTML = getOrderCardTemplate(index);
+    updateBasketTotals();
+}
+
+function updateBasketTotals() {
+    let subtotal = calculateSubtotal();
+    let total = subtotal + deliveryPrice;
+    let formattedSubtotal = subtotal.toFixed(2).replace(".", ",");
+    let formattedTotal = total.toFixed(2).replace(".", ",");
+
+    document.getElementById("basket-subtotal").innerText = `${formattedSubtotal}€`;
+    document.getElementById("basket-total").innerText = `${formattedTotal}€`;
+    document.getElementById("buy-now-total").innerText = formattedTotal;
+}
+
 // Increase quantity in the shopping cart
 function addToBasket(index) {
     myDishes[index].amount++;
     document.getElementById("sticky-rail").classList.add("open-basket");
-    renderBasket();
+    updateSingleOrderCard(index);
 }
 
 // Decrease quantity in the shopping cart
 function decreaseAmount(index) {
     myDishes[index].amount--;
-    renderBasket();
+    updateSingleOrderCard(index);
 }
 
 // Remove dish from the shopping cart

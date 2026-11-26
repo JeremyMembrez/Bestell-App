@@ -30,7 +30,7 @@ function getFilledBasketTemplate(subtotal, total) {
         <table class="basket-table">
             <tr>
                 <td>Subtotal</td>
-                <td class="price">${subtotal}€</td>
+                <td id="basket-subtotal" class="price">${subtotal}€</td>
             </tr>
             <tr>
                 <td>Delivery fee</td>
@@ -38,16 +38,16 @@ function getFilledBasketTemplate(subtotal, total) {
             </tr>
             <tr class="total-row">
                 <td>Total</td>
-                <td class="price">${total}€</td>
+                <td id="basket-total" class="price">${total}€</td>
             </tr>
         </table>
-        <button onclick="sendOrder()" id="buy-now-button">Buy now (${total}€)</button>
+        <button onclick="sendOrder()" id="buy-now-button">Buy now (<span id="buy-now-total">${total}</span>€)</button>
     `;
 }
 
 function getOrderCardTemplate(index) {
     return `
-        <div class="order-card">
+        <div id="order-card-${index}" class="order-card">
         <p>${myDishes[index].amount} x ${myDishes[index].name}</p>
         <div class="order-position">
             <div class="order-amount">
