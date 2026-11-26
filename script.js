@@ -1,3 +1,5 @@
+const deliveryPrice = 4.99;
+
 function init() {
     renderBasket();
     renderDishes();
@@ -25,7 +27,9 @@ function renderBasket() {
     }
 }
 
-// Checks whether dishes in "myDishes" have an amount > 0.
+/** Checks whether dishes in "myDishes" have an amount > 0.
+*@return 
+*/
 function hasDishesInBasket() {
     for (let i = 0; i < myDishes.length; i++) {
         if (myDishes[i].amount > 0) {
@@ -40,7 +44,7 @@ function hasDishesInBasket() {
 // replace the (.) with a (,)
 function renderFilledBasket(basketContentRef) {
     let subtotal = calculateSubtotal();
-    let total = subtotal + 4.99;
+    let total = subtotal + deliveryPrice;
     let formattedSubtotal = subtotal.toFixed(2).replace(".", ",");
     let formattedTotal = total.toFixed(2).replace(".", ",");
 
